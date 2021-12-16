@@ -1,12 +1,14 @@
+require("dotenv").config({path:__dirname+'/./../../.env'});
+
 module.exports = {
   db: {
-    database: process.env.DB_DATABASE || 'pos',
-    username: process.env.DB_USERNAME || 'root',
-    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_DATABASE,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
     options: {
       dialect: 'mysql',
-      host: process.env.DB_HOST || 'localhost',
-      storage: `./${process.env.DB_DATABASE || 'pos'}.mysql2`
+      host: process.env.DB_HOST,
+      storage: `./${process.env.DB_DATABASE}.mysql2`
     },
     pool: {
       max: 5,
