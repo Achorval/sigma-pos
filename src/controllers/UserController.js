@@ -191,7 +191,7 @@ module.exports = {
                     amount: request.body.amount,
                     type: 'credit',
                     description: `You processed a payment of ${request.body.amount}`,
-                    status: 'success'
+                    status: 'Success'
                 })
                 return response.status(200).send({
                     status: 'success',
